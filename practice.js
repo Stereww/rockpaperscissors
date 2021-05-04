@@ -17,37 +17,71 @@ function playerPlay() {
     player = prompt('what is your play?');
 };
 
-computerPlay();
-playerPlay();
+let finish;
 
 function result(computer, player) {
     if (computer === "scissors" && player === "scissors"){
-        console.log("it's a tie");
+        finish = "it's a tie";
     }
     else if (computer === "scissors" && player === "paper"){
-        console.log("computer wins");
+        finish = "computer wins";
     }
     else if (computer === "scissors" && player === "rock"){
-        console.log("you win");
+        finish = "you win";
     }
     else if (computer === "rock" && player === "scissors"){
-        console.log("computer wins");
+        finish = "computer wins";
     }
     else if (computer === "rock" && player === "rock"){
-        console.log("it's a tie");
+        finish = "it's a tie";
     }
     else if (computer === "rock" && player === "paper"){
-        console.log("you win");
+        finish = "you win";
     }
     else if (computer === "paper" && player === "scissors"){
-        console.log("you win");
+        finish = "you win";
     }
     else if (computer === "paper" && player === "paper"){
-        console.log("it's a tie");
+        finish = "it's a tie";
     }
     else {
-        console.log("computer wins");
+        finish = "computer wins";
     }
+    console.log(finish);
 }
 
-result(computer, player);
+let playerScore = 0;
+let computerScore = 0;
+let bestOf = prompt('how many games do you want in your series?');
+let winningScore = Math.ceil(bestOf/2);
+
+while (1){
+    computerPlay();
+    playerPlay();
+    result(computer, player);
+    //console.log(finish);
+    if (finish === "you win"){
+        playerScore++;
+        //console.log("player score:")
+        //console.log(playerScore);
+    }
+    else if (finish === "computer wins"){
+        computerScore++;
+        //console.log("computer score:")
+        //console.log(computerScore);
+    }
+    else {
+    }
+
+    if (playerScore >= winningScore){
+        console.log("the player wins it all!");
+        break;
+    }
+    else if (computerScore >= winningScore){
+        console.log("the computer wins it all!");
+        break;
+    }
+    else{
+
+    }
+}
