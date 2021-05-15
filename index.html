@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Rock, Paper, Scissors!</title>
+  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8"/>
 </head>
 <body>
-  <script src="practice.js"></script>
+  <h1>Rock, Paper, Scissors!</h1>
+  <h2>Best of...?</h2>
+    <div id="best-of-buttons">
+      <button class="best-of-button" id="best-of-3">3</button>
+      <button class="best-of-button" id="best-of-5">5</button>
+      <button class="best-of-button" id="best-of-7">7</button>
+    </div>
+    <div id="best-of-display">You're playing a best of...</div>
+    <h3>Make your pick!</h3>
+    <div id="your-pick-buttons">
+      <button class="choice-button" id="rock-button"></button>
+      <button class="choice-button" id="paper-button"></button>
+      <button class="choice-button" id="scissors-button"></button>
+    </div>
+    <div id="your-pick-labels">
+      <p class="label">Rock</p>
+      <p class="label">Paper</p>
+      <p class="label">Scissors</p>
+    </div>
+    <div id="round-outcome"></div>
+    <div id="scoreboard">
+      <h4 class="score" id="scoreboardPlayer">Player Score: 0</h4>
+      <h4 class="score" id="scoreboardComputer">Computer Score: 0</h4>
+    </div>
+    <script src="practice.js"></script>
 </body>
 </html>
